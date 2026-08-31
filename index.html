@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Poop Story Runner</title>
+<meta name="description" content="Endless 3D runner: a poop with a wedding ring stuck in it swims home through the city sewers. Free on Google Play.">
+<meta property="og:title" content="Poop Story Runner">
+<meta property="og:description" content="Endless 3D runner: swim the sewer, dodge junk, race a wedding ring home.">
+<meta property="og:image" content="icon.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap">
+<style>
+:root{
+  --ground:#0d1618;
+  --surface:#17272b;
+  --surface-hi:#20353b;
+  --ink:#060d0e;
+  --text:#ece4d4;
+  --dim:#9aada9;
+  --amber:#f0a838;
+  --amber-deep:#c47d1c;
+  --brown:#8a5a34;
+  --shadow:6px 6px 0 var(--ink);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--text);
+  font-family:Nunito,"Segoe UI",system-ui,-apple-system,sans-serif;
+  font-weight:400;
+  line-height:1.6;
+  /* Тёплое пятно света люка сверху — та же композиция, что у заставки игры. */
+  background-image:radial-gradient(120% 70% at 50% -10%, rgba(240,168,56,.18), rgba(240,168,56,0) 60%);
+  background-repeat:no-repeat;
+}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px 64px}
+a{color:var(--amber)}
+h1,h2{font-weight:900;letter-spacing:-.02em;text-wrap:balance;margin:0}
+
+/* ---------- шапка ---------- */
+header{padding:56px 0 40px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:20px}
+.icon{
+  width:132px;height:132px;border-radius:30px;display:block;
+  border:4px solid var(--ink);box-shadow:var(--shadow);background:var(--surface);
+}
+h1{font-size:clamp(38px,9vw,62px);line-height:1.02;
+  -webkit-text-stroke:0;text-shadow:3px 3px 0 var(--ink)}
+.tag{font-size:clamp(17px,3.6vw,21px);font-weight:700;color:var(--text);max-width:26ch;margin:0}
+.meta{font-size:14px;color:var(--dim);margin:0;letter-spacing:.02em}
+
+.cta{
+  display:inline-block;margin-top:4px;
+  background:var(--amber);color:var(--ink);
+  font-weight:900;font-size:20px;letter-spacing:.01em;
+  text-decoration:none;padding:16px 34px;border-radius:16px;
+  border:4px solid var(--ink);box-shadow:var(--shadow);
+  transition:transform .08s ease, box-shadow .08s ease;
+}
+.cta:hover{background:#ffb949}
+.cta:active{transform:translate(6px,6px);box-shadow:0 0 0 var(--ink)}
+.cta:focus-visible{outline:4px solid var(--text);outline-offset:4px}
+
+/* ---------- кадры ---------- */
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;padding:4px 0}
+.shots img{
+  width:100%;height:auto;border-radius:14px;
+  border:4px solid var(--ink);box-shadow:var(--shadow);
+  background:var(--surface);display:block;
+}
+
+/* ---------- разделы ---------- */
+section{margin-top:52px}
+h2{font-size:clamp(24px,5vw,32px);margin-bottom:18px;color:var(--amber)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{
+  background:var(--surface);border:4px solid var(--ink);border-radius:16px;
+  box-shadow:var(--shadow);padding:18px 20px;
+}
+.card h3{margin:0 0 6px;font-size:18px;font-weight:900;color:var(--text)}
+.card p{margin:0;font-size:15px;color:var(--dim)}
+.lede{font-size:17px;color:var(--text);max-width:62ch}
+
+footer{
+  margin-top:56px;padding-top:24px;border-top:2px solid var(--surface-hi);
+  font-size:14px;color:var(--dim);display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center;
+}
+footer a{text-decoration:none;font-weight:700}
+footer a:hover{text-decoration:underline}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <img class="icon" src="icon.png" width="132" height="132" alt="Poop Story Runner icon: a cartoon poop in a life ring holding a diamond ring">
+  <h1>Poop Story Runner</h1>
+  <p class="tag">A groom flushed his wedding ring. Somebody has to bring it back.</p>
+  <a class="cta" href="https://play.google.com/store/apps/details?id=com.kenan.poopstoryrunner">Install on Google Play</a>
+  <p class="meta">Free &middot; Android &middot; Plays offline &middot; Contains ads</p>
+</header>
+
+<section>
+  <div class="shots">
+    <img src="shot1.jpg" width="200" height="356" alt="Swimming through the Italian district of the sewer" loading="lazy">
+    <img src="shot2.jpg" width="200" height="356" alt="The open-air waterpark between districts" loading="lazy">
+    <img src="shot3.jpg" width="200" height="356" alt="A dark blue stretch of pipe with a combo multiplier" loading="lazy">
+    <img src="shot4.jpg" width="200" height="356" alt="A green overgrown stretch of the sewer" loading="lazy">
+  </div>
+</section>
+
+<section>
+  <h2>What it is</h2>
+  <p class="lede">An endless 3D runner where you don't run — you <strong>swim</strong>. Living water carries you
+  through the pipes under one huge city: waves rock you, currents pull, whirlpools drag you down. Steer with your
+  finger, jump over trash, dive under pipes, and don't let yourself dissolve before you get home.</p>
+</section>
+
+<section>
+  <h2>In the pipe</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Fart turbo</h3>
+      <p>Eat mini-poops, store gas, then hit the button. The more you saved, the longer the turbo burns.</p>
+    </div>
+    <div class="card">
+      <h3>12 districts</h3>
+      <p>Italian with pizza, Turkish with shawarma, Japanese with sushi. Own water colour, own trash, own mood.</p>
+    </div>
+    <div class="card">
+      <h3>The sewer hits hard</h3>
+      <p>Rats charge at you, sewage waves crash overhead, fatbergs block the pipe. Grab fresh medkits.</p>
+    </div>
+    <div class="card">
+      <h3>Grow stronger</h3>
+      <p>From runny sludge to rock-solid: five upgrade branches, 28 run perks, skins with caps and crowns.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>&copy; 2026 Kenny &amp; Co.</span>
+  <a href="mailto:mamedov90kenan@gmail.com">Contact &amp; support</a>
+  <a href="https://docs.google.com/document/d/e/2PACX-1vQuNfjWZyrc9EhDDSArPWrucjkwwOdX9Viayetl9SKxpZWysOrn7wGo5YZiw2LkAYwqxHdyoJiVmUB0/pub">Privacy policy</a>
+</footer>
+
+</div>
+</body>
+</html>
